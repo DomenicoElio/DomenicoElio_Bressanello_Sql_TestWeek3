@@ -598,7 +598,7 @@
 								"$ref": "AAAAAAGAvFVPiIrKpXA="
 							},
 							"name": "IdPizza",
-							"type": "INTEGER",
+							"type": "INT",
 							"length": 0,
 							"primaryKey": true
 						},
@@ -670,7 +670,7 @@
 								"$ref": "AAAAAAGAvFdHBIr3dsY="
 							},
 							"name": "IdIngredients",
-							"type": "INTEGER",
+							"type": "INT",
 							"length": 0,
 							"primaryKey": true
 						},
@@ -702,7 +702,7 @@
 								"$ref": "AAAAAAGAvFdHBIr3dsY="
 							},
 							"name": "StockroomQt",
-							"type": "INTEGER",
+							"type": "INT",
 							"length": 0
 						}
 					]
