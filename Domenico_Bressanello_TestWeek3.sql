@@ -10,7 +10,7 @@ constraint PK_PIZZA primary key (IdPizza),
 create table Ingredients(
 IdIngredient int Identity(1,1) not null constraint PK_INGREDIENT primary key,
 IngredientName nvarchar(50) not null unique,
-IngredientsCost decimal constraint check_cost check (IngredientsCost>0), 
+IngredientsCost decimal (5,5) constraint check_cost check (IngredientsCost>0), 
 StockroomQt int constraint check_stock check (StockroomQt >= 0),
 );
 
@@ -76,12 +76,12 @@ select *
 from Pizza
 where PizzaPrice >= 6;
 
---Estrarre la pizza/le pizze più costosa/e.
+--Estrarre la pizza/le pizze piÃ¹ costosa/e.
 SELECT * 
 FROM Pizza
 WHERE PizzaPrice IN (SELECT MAX(PizzaPrice) FROM Pizza);
 
---Estrarre le pizze «bianche»
+--Estrarre le pizze Â«biancheÂ»
 SELECT *
 FROM PizzaIngredients 
 WHERE IdIngredient <> 2;
@@ -307,7 +307,8 @@ go
 select dbo.NumIngredients('Ingredients');
 ------------------------------------------------------------------------------------------------------------------------
 
-/*--Realizzare una view che rappresenta il menù con tutte le pizze.create view PizzasMenu  
+/*--Realizzare una view che rappresenta il menÃ¹ con tutte le pizze.
+create view PizzasMenu  
 as  
 select p.PizzaName, p.PizzaPrice  
 from PizzaIngredients as p join Pizzas.Pizzas as  i  
